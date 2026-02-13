@@ -136,7 +136,7 @@ update_links() {
   # Find all files containing the old repo reference
   while IFS= read -r file; do
     # Count occurrences
-    local count=$(grep -c "github.com/$old_repo/$old_name" "$file" 2>/dev/null || echo 0)
+    local count=$(grep -c "githubusercontent.com/$old_repo/$old_name" "$file" 2>/dev/null || echo 0)
 
     if [[ $count -gt 0 ]]; then
       # Backup original
@@ -145,10 +145,10 @@ update_links() {
       # Replace links - use different sed syntax for BSD/macOS vs GNU sed
       if sed --version &>/dev/null 2>&1; then
         # GNU sed
-        sed -i "s|github.com/$old_repo/$old_name|github.com/$new_owner/$new_repo|g" "$file"
+        sed -i "s|githubusercontent.com/$old_repo/$old_name|githubusercontent.com/$new_owner/$new_repo|g" "$file"
       else
         # BSD sed (macOS)
-        sed -i '' "s|github.com/$old_repo/$old_name|github.com/$new_owner/$new_repo|g" "$file"
+        sed -i '' "s|githubusercontent.com/$old_repo/$old_name|githubusercontent.com/$new_owner/$new_repo|g" "$file"
       fi
 
       ((files_updated++))
