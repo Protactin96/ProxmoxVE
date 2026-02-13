@@ -5,7 +5,7 @@
 # License: MIT | https://github.com/Protactin96/ProxmoxVE/raw/main/LICENSE
 # Source: https://github.com/AKVorrat/netzbremse-measurement
 #         https://github.com/lwndp/netzbremse-dashboard
-
+set -x
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
 verb_ip6
