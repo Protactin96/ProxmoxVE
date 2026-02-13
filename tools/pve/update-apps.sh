@@ -4,7 +4,7 @@
 # Author: BvdBerg01 | Co-Author: remz1337
 # License: MIT | https://github.com/Protactin96/ProxmoxVE/raw/main/LICENSE
 
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/refs/heads/main/misc/core.func)
+source <(curl -fsSL https://raw.githubusercontent.com/Protactin96/ProxmoxVE/refs/heads/main/misc/core.func)
 
 # =============================================================================
 # CONFIGURATION VARIABLES
@@ -346,7 +346,7 @@ for container in $CHOICE; do
   fi
 
   #2) Extract service build/update resource requirements from config/installation file
-  script=$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/ct/${service}.sh)
+  script=$(curl -fsSL https://raw.githubusercontent.com/Protactin96/ProxmoxVE/main/ct/${service}.sh)
 
   #2.1) Check if the script downloaded successfully
   if [ $? -ne 0 ]; then

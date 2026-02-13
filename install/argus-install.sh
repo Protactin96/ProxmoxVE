@@ -57,7 +57,7 @@ service:
       url: community-scripts/ProxmoxVE
       use_prerelease: false
     dashboard:
-      icon: https://raw.githubusercontent.com/community-scripts/ProxmoxVE/refs/heads/main/misc/images/logo.png
+      icon: https://raw.githubusercontent.com/Protactin96/ProxmoxVE/refs/heads/main/misc/images/logo.png
       icon_link_to: https://helper-scripts.com/
       web_url: https://github.com/Protactin96/ProxmoxVE/releases
 EOF
