@@ -136,6 +136,7 @@ update_links() {
   # Find all files containing the old repo reference
   while IFS= read -r file; do
     # Count occurrences
+    print_info "Checking file $file"
     local count=$(grep -c "githubusercontent.com/$old_repo/$old_name" "$file" 2>/dev/null || echo 0)
 
     if [[ $count -gt 0 ]]; then
