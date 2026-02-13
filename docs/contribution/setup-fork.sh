@@ -129,6 +129,8 @@ update_links() {
     print_info "Searching misc/ directory only (core functions)"
   fi
 
+  print_info "old_repo: $old_repo, old_name: $old_name"
+  print_info "new_repo: $new_repo, new_name: $new_owner"
   echo ""
 
   # Find all files containing the old repo reference
