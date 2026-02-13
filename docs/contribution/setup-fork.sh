@@ -124,7 +124,7 @@ update_links() {
   local search_path="$repo_root/misc"
   if [[ "$UPDATE_ALL" == "true" ]]; then
     search_path="$repo_root"
-    print_info "Searching all files (--full mode)"
+    print_info "Searching all files (--full mode) at $search_path"
   else
     print_info "Searching misc/ directory only (core functions)"
   fi
@@ -155,7 +155,7 @@ update_links() {
       ((files_updated++))
       print_success "Updated $file ($count links)"
     fi
-  done < <(find "$search_path" -type f \( -name "*.md" -o -name "*.sh" -o -name "*.func" -o -name "*.json" \) -not -path "*/.git/*" 2>/dev/null | xargs grep -l "github.com/$old_repo/$old_name" 2>/dev/null)
+  done < <(find "$search_path" -type f \( -name "*.md" -o -name "*.sh" -o -name "*.func" -o -name "*.json" \) -not -path "*/.git/*" 2>/dev/null | xargs grep -l "githubusercontent.com/$old_repo/$old_name" 2>/dev/null)
 
   return $files_updated
 }
